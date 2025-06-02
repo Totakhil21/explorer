@@ -29,4 +29,16 @@ public class ExplorerSearchTest {
         assertEquals(9, actual); 
     }
 
+
+      @Test
+    public void testReachableArea_blockedStart() {
+        int[][] island = {
+            {2,2,2},
+            {2,0,2},
+            {2,2,2}
+        };
+        int actual = ExplorerSearch.reachableArea(island);
+        assertEquals(1, actual); 
+    }
+
 }
