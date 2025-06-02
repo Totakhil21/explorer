@@ -46,7 +46,17 @@ public class ExplorerSearchTest {
     public void testReachableArea_singleCell() {
         int[][] island = {{0}};
         int actual = ExplorerSearch.reachableArea(island);
-        assertEquals(1, actual); // Just one cell
+        assertEquals(1, actual); 
     }
+
+
+     @Test
+    public void testReachableArea_nullIsland() {
+        int[][] island = null;
+        int actual = ExplorerSearch.reachableArea(island);
+        assertEquals(0, actual); 
+    }
+
+
 
 }
