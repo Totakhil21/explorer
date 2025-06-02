@@ -107,7 +107,7 @@ public class ExplorerSearch {
      * @param explored tracks visited cells
      * @return list of valid neighboring positions
      */
-    private static List<int[]> getValidMoves(int[][] island, int[] pos, boolean[][] explored) {
+    static List<int[]> getValidMoves(int[][] island, int[] pos, boolean[][] explored) {
 
         List<int[]> validMoves = new ArrayList<>();
 
@@ -135,7 +135,7 @@ public class ExplorerSearch {
 
                 (island[nextRow][nextCol] == 0 || island[nextRow][nextCol] == 1) &&
                 !explored[nextRow][nextCol]) {
-                    
+
                 validMoves.add(new int[] {nextRow, nextCol});
             }
         }
